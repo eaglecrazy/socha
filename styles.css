@@ -131,6 +131,20 @@ img {
 .stats {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  background: #ffffff url(img/bg.png) no-repeat center;
+  background-size: cover;
+}
+.stats .grid-item {
+  border: 1px solid red;
+}
+.stats .info {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
+}
+.stats .info .info_block {
+  grid-column-start: 1;
+  grid-column-end: 4;
 }
 .gallery {
   display: grid;

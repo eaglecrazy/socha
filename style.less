@@ -5,37 +5,43 @@
     src: url(../fonts/oswald/oswald-bold.ttf);
     font-weight: 700;
 }
+
 @font-face {
     font-family: oswald;
     src: url(../fonts/oswald/oswald-extralight.ttf);
     font-weight: 200;
 }
+
 @font-face {
     font-family: oswald;
     src: url(../fonts/oswald/oswald-light.ttf);
     font-weight: 300;
 }
+
 @font-face {
     font-family: oswald;
     src: url(../fonts/oswald/oswald-medium.ttf);
     font-weight: 500;
 }
+
 @font-face {
     font-family: oswald;
     src: url(../fonts/oswald/oswald-regular.ttf);
     font-weight: 400;
-}@font-face {
+}
+
+@font-face {
     font-family: oswald;
     src: url(../fonts/oswald/oswald-semibold.ttf);
     font-weight: 600;
 }
 
-body{
-    color:#7f7f7f;
+body {
+    color: #7f7f7f;
     background-color: #f9f9f9;
     font-size: 12px;
     font-family: Arial;
-    
+
 }
 
 .wrapper {
@@ -53,101 +59,103 @@ body{
 
 .gallery {}
 
-img{
+img {
     min-width: 100%;
     height: auto;
     display: block;
 }
 
 .grid-item {
-//    border: 1px solid red;
+    //    border: 1px solid red;
 }
 
 .header {
     display: grid;
     grid-template-columns: 230px 20px 1fr 1fr 1fr;
-    
-    
-    
-    .header-box{
+
+
+
+    .header-box {
         background-color: #fff;
         padding: 47px 28px;
         box-sizing: border-box;
-        
-        .logo{
+
+        .logo {
             margin-bottom: 35px;
             display: inline-block;
         }
-        
-        nav{
-                font-family: 'oswald', sans-serif;
-                font-size: 16px;
-                line-height: 33px;
-//                font-weight: 700;
-                text-transform: uppercase;
+
+        nav {
+            font-family: 'oswald', sans-serif;
+            font-size: 16px;
+            line-height: 33px;
+            //                font-weight: 700;
+            text-transform: uppercase;
+
             a {
                 text-decoration: none;
-                color:inherit;
+                color: inherit;
                 transition: all 300ms ease-in-out;
-                
-                &:hover{
-                    color:#ffa800;
+
+                &:hover {
+                    color: #ffa800;
                 }
             }
-            
+
             ul li {
                 position: relative;
-                &::after{
+
+                &::after {
                     content: "";
                     position: absolute;
                     width: 100%;
                     height: 1px;
-                    background:  url(img/li.jpg) repeat-x;
+                    background: url(img/li.jpg) repeat-x;
                     display: block;
                     left: 0;
                     bottom: 0;
-                    right:0;    
+                    right: 0;
                 }
             }
         }
-        
+
     }
-    
-    
-    
-    
-    .image-box{
+
+
+
+
+    .image-box {
         position: relative;
-        
-        &:hover{
-            .mask{
+
+        &:hover {
+            .mask {
                 opacity: 1;
             }
-            
-            
+
+
         }
-        
-        .mask{
+
+        .mask {
             position: absolute;
             width: 100%;
             height: 100%;
-            top:0;
+            top: 0;
             left: 0;
-            background-color: rgba(255,168,0,0.8);
+            background-color: rgba(255, 168, 0, 0.8);
             opacity: 0;
             transition: all 300ms ease-in-out;
         }
-        
-        .info-box{
+
+        .info-box {
             position: absolute;
             bottom: 0;
             left: 0;
             width: 100%;
             padding-bottom: 43px;
             text-align: center;
-            color:#fff;
-            
-            h2{
+            color: #fff;
+
+            h2 {
                 font-family: 'oswald', sans-serif;
                 font-size: 30px;
                 line-height: 30px;
@@ -155,11 +163,12 @@ img{
                 margin-bottom: 14px;
                 text-transform: uppercase;
             }
-            p{
+
+            p {
                 text-align: center;
                 margin-bottom: 0;
                 font-size: 11px;
-                
+
             }
         }
     }
@@ -168,6 +177,25 @@ img{
 .stats {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    background: #fff url(img/bg.png) no-repeat center;
+    background-size: cover;
+
+    .grid-item {
+        border: 1px solid red;
+    }
+
+
+    .info {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto auto;
+        
+        .info_block{
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+
+    }
 }
 
 .gallery {
@@ -175,16 +203,16 @@ img{
     grid-template-columns: 360px 1fr 1fr;
     grid-template-rows: 370px 370px;
     grid-gap: 19px;
-    
+
 
     .grid-item:nth-child(1) {
         grid-row-start: 1;
         grid-row-end: 3;
     }
-    
+
     .grid-item:nth-child(2) {
         grid-column-start: 2;
         grid-column-end: 4;
     }
-    
+
 }
