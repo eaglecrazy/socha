@@ -50,15 +50,9 @@ body {
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto minmax(16px, auto) auto;
+    grid-template-rows: auto auto minmax(16px, auto) auto auto;
     grid-row-gap: 35px;
 }
-
-//.grid-item {
-//    border: 1px solid red;
-//
-//}
-
 
 .title {
     display: grid;
@@ -384,21 +378,98 @@ img {
             }
         }
 
-			&:nth-child(3),&:nth-child(4){
+        &:nth-child(3),
+        &:nth-child(4) {
 
-				.container {
-					position:absolute;
-					top:0;
-					left:0;
-					right: 0;
-					bottom: 0;
-					display: flex;
-					align-items:center;
-					justify-content: center;
-				}
-            .content_box {
-                
+            .container {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
+
+
+        }
+    }
+}
+
+footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    line-height: 51px;
+    font-size: 9px;
+    text-transform: uppercase;
+    color: #000;
+    font-family: 'oswald', sans-serif;
+
+    p:first-child {
+        text-align: left;
+        background: url(img/sepa.jpg) repeat-x top;
+        color: inherit;
+        font-size: inherit;
+    }
+
+    p:last-child {
+        text-align: right;
+        background: url(img/sepa.jpg) repeat-x top;
+        color: inherit;
+        font-size: inherit;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .wrapper .header {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, auto);
+        text-align: center;
+        
+        nav{
+            text-align: left;
+        }
+        .image-box{
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+    .wrapper .stats {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, auto);
+    }
+
+    .wrapper .gallery {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 370px);
+        height: auto;
+    }
+
+    .wrapper .gallery .item:nth-child(1) {
+        grid-row-start: auto;
+        grid-row-end: auto;
+        overflow-y: hidden;
+
+        img {
+            position: absolute;
+            bottom: -280px;
+        }
+    }
+
+    .wrapper .gallery .item:nth-child(2) {
+        grid-column-start: auto;
+        grid-column-end: auto;
+        overflow-x: hidden;
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
         }
     }
 }
